@@ -11,7 +11,7 @@ import { BookModule } from './book/book.module';
   imports: [ GraphQLModule.forRoot({
     driver: ApolloDriver,
     playground: true,
-    autoSchemaFile : join(process.cwd() , "src/schema.graphql"),
+    // autoSchemaFile : join(process.cwd() , "src/schema.graphql"),
    //if we want to code first approach, we need to comment typePaths
     typePaths:["./**/*.graphql"] //project ma jao jha b  graphql ki file ha us graphql ki schema file ki location
   }),
