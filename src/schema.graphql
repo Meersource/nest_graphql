@@ -9,5 +9,5 @@ type Student {
 }
 
 type Query {
-  getAllStudents: [Student!]!
+  students: [Student!]!
 }
