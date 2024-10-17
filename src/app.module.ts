@@ -5,6 +5,8 @@ import { GraphQLModule } from '@nestjs/graphql';
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { join } from 'path';
 import { StudentModule } from './student/student.module';
+import { AppResolver } from './app.resolver';
+import { BookModule } from './book/book.module';
 
 @Module({
   imports: [ GraphQLModule.forRoot({
@@ -18,8 +20,9 @@ import { StudentModule } from './student/student.module';
     // typePaths:["./**/*.graphql"] //project ma jao jha b  graphql ki file ha us graphql ki schema file ki location
   }),
   StudentModule,
+  BookModule
   ],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [AppService,AppResolver],
 })
 export class AppModule {}
